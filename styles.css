@@ -168,7 +168,7 @@ p { margin: 0; }
 
 /* Teacher */
 .teacher { display: grid; grid-template-columns: 320px 1fr; gap: 56px; align-items: start; }
-.teacher img { width: 100%; border-radius: 50%; }
+.teacher img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
 .teacher h2 { margin-bottom: 6px; }
 .teacher .role { color: var(--muted); margin-bottom: 24px; }
 .teacher p + p { margin-top: 14px; }
