@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -48,16 +48,39 @@
         <p class="hero-note">Пробный урок бесплатный. Знакомимся, я смотрю, что ребёнок уже умеет, и вместе решаем, что делать дальше.</p>
       </div>
 
-      <div class="code-card" aria-hidden="true">
-        <div class="code-dots"><span></span><span></span><span></span></div>
-        <div><span class="c"># Сколько чисел от 1 до 2026</span></div>
-        <div><span class="c"># делятся на 3 или на 7?</span></div>
-        <div>count = <span class="n">0</span></div>
-        <div><span class="k">for</span> n <span class="k">in</span> range(<span class="n">1</span>, <span class="n">2027</span>):</div>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span> n % <span class="n">3</span> == <span class="n">0</span> <span class="k">or</span> n % <span class="n">7</span> == <span class="n">0</span>:</div>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count += <span class="n">1</span></div>
-        <div>print(count)</div>
-        <div class="out">&gt; 868  <span class="c"># а теперь — без компьютера</span></div>
+      <div class="board">
+        <svg viewBox="0 0 520 410" role="img" aria-label="Доска: египетский треугольник со сторонами 3, 4 и 5, теорема Пифагора, площадь трапеции и система уравнений">
+          <g fill="none" stroke="#E6E8F0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <!-- египетский треугольник -->
+            <path d="M40 60V180H200"/>
+            <path d="M40 60L200 180" stroke="#C6F432"/>
+            <path d="M40 164H56V180" stroke-width="2"/>
+            <!-- трапеция -->
+            <path d="M30 365H190L150 275H75Z"/>
+            <path d="M75 275V365" stroke="#8FA3FF" stroke-width="2" stroke-dasharray="5 6"/>
+            <!-- дробь и скобка системы -->
+            <path d="M258 318H318" stroke-width="2.5"/>
+            <path d="M384 276Q372 276 372 289V305Q372 315 363 315Q372 315 372 325V341Q372 354 384 354" stroke-width="2.5"/>
+          </g>
+          <g font-family="Caveat, 'Segoe Print', cursive" fill="#E6E8F0" font-size="30">
+            <text x="20" y="130">3</text>
+            <text x="112" y="210">4</text>
+            <text x="126" y="108" fill="#C6F432">5</text>
+            <text x="262" y="92" font-size="50" font-weight="700">a² + b² = c²</text>
+            <text x="264" y="140" font-size="34" fill="#8FA3FF">3² + 4² = 5²</text>
+            <text x="264" y="180" font-size="30" fill="#9A9DB0">9 + 16 = 25</text>
+            <text x="112" y="264" text-anchor="middle" font-size="26">a</text>
+            <text x="110" y="394" text-anchor="middle" font-size="26">b</text>
+            <text x="84" y="330" font-size="26" fill="#8FA3FF">h</text>
+            <text x="208" y="328" font-size="32">S =</text>
+            <text x="288" y="308" text-anchor="middle" font-size="28">a + b</text>
+            <text x="288" y="346" text-anchor="middle" font-size="28">2</text>
+            <text x="324" y="328" font-size="32">· h</text>
+            <text x="392" y="306" font-size="30">x + y = 7</text>
+            <text x="392" y="346" font-size="30">2x − y = 5</text>
+            <text x="392" y="394" font-size="28" fill="#C6F432">x = 4, y = 3</text>
+          </g>
+        </svg>
       </div>
     </div>
   </section>
@@ -70,6 +93,23 @@
         <p>Все уроки веду я сам, Вадим Крючков. Математику и программирование преподаю с 2014 года, за это время у меня занималось больше 1200 учеников. С 2022 года работаю с ребятами, которые учатся в Польше.</p>
         <p>Мои команды не раз занимали призовые места на республиканских и международных соревнованиях.</p>
         <p>Кроме уроков, я учу других учителей. В Беларуси подготовил 50 преподавателей, а сейчас руковожу сообществом из 130 учителей за рубежом и помогаю им перейти в онлайн.</p>
+      </div>
+    </div>
+    <div class="wrap code-strip">
+      <div>
+        <h3>Задача с урока</h3>
+        <p>Сначала пишем программу, которая находит ответ. Потом пробуем получить то же число без компьютера.</p>
+      </div>
+      <div class="code-card" aria-hidden="true">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <div><span class="c"># Сколько чисел от 1 до 2026</span></div>
+        <div><span class="c"># делятся на 3 или на 7?</span></div>
+        <div>count = <span class="n">0</span></div>
+        <div><span class="k">for</span> n <span class="k">in</span> range(<span class="n">1</span>, <span class="n">2027</span>):</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span> n % <span class="n">3</span> == <span class="n">0</span> <span class="k">or</span> n % <span class="n">7</span> == <span class="n">0</span>:</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count += <span class="n">1</span></div>
+        <div>print(count)</div>
+        <div class="out">&gt; 868  <span class="c"># а теперь — без компьютера</span></div>
       </div>
     </div>
   </section>
